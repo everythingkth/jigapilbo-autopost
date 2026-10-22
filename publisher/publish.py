@@ -121,12 +121,34 @@ def ig_publish(container_id, uid, token):
     return {"id": mid, "url": link}
 
 
+_RECENT = None
+
+
+def ig_existing(uid, token, caption, reel):
+    """같은 캡션으로 이미 올라간 게시물이 있으면 그 게시물을 돌려준다 (중복 게시 방지)."""
+    global _RECENT
+    if _RECENT is None:
+        d = check(requests.get(f"{IG_API}/{uid}/media", params={"fields": "id,caption,media_type,media_product_type,permalink", "limit": 30, "access_token": token}, timeout=30), "IG 최근 게시물")
+        _RECENT = d.get("data", [])
+    want = caption.strip()
+    for m in _RECENT:
+        if (m.get("caption") or "").strip() != want:
+            continue
+        is_reel = m.get("media_product_type") == "REELS"
+        if is_reel == reel:
+            return {"id": m["id"], "url": m.get("permalink"), "found_existing": True}
+    return None
+
+
 def do_instagram(post_dir, ch):
     uid, token = env("IG_USER_ID"), env("IG_TOKEN")
     caption = limit_hashtags(ch["caption"], IG_MAX_HASHTAGS)[:IG_CAPTION_MAX]
     urls = [media_url(post_dir, p) for p in ch["images"]]
     if DRY:
         return {"dry": True, "images": urls, "caption": caption}
+    ex = ig_existing(uid, token, caption, reel=False)
+    if ex:
+        return ex
     if len(urls) == 1:
         c = check(requests.post(f"{IG_API}/{uid}/media", data={"image_url": urls[0], "caption": caption, "access_token": token}, timeout=60), "IG 이미지")
         ig_wait(c["id"], token)
@@ -151,6 +173,9 @@ def do_instagram_reel(post_dir, ch):
         data["cover_url"] = media_url(post_dir, ch["cover"])
     if DRY:
         return {"dry": True, "video": video, "caption": caption}
+    ex = ig_existing(uid, token, caption, reel=True)
+    if ex:
+        return ex
     c = check(requests.post(f"{IG_API}/{uid}/media", data=data, timeout=60), "IG 릴스")
     ig_wait(c["id"], token, timeout=900)
     return ig_publish(c["id"], uid, token)
@@ -289,7 +314,7 @@ def main():
             res["at"] = dt.datetime.now(KST).isoformat(timespec="seconds")
             rec[name] = res
             rec.get("_errors", {}).pop(name, None)
-            log(f"[{pid}] {name}: 게시 완료 {res.get('url')}")
+            log(f"[{pid}] {name}: {'이미 올라가 있음(기록만 보완)' if res.get('found_existing') else '게시 완료'} {res.get('url')}")
             save_state(st)  # 채널마다 바로 저장 → 중복 게시 방지
         if not rec:
             st.pop(pid, None)
