@@ -1,0 +1,33 @@
+name: insights
+on:
+  schedule:
+    - cron: "41 */6 * * *"     # 6시간마다 성과·댓글 수집, 답글 게시
+  push:
+    branches: [main]
+    paths: ["queue/replies/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: insights
+  cancel-in-progress: false
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests==2.32.3
+      - env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python publisher/insights.py
+      - name: save
+        if: always()
+        run: |
+          git config user.name "jigapilbo-bot"
+          git config user.email "jigapilbo-bot@users.noreply.github.com"
+          git add state/ 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "성과·댓글 기록" && git pull --rebase && git push)
