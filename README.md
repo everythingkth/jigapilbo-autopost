@@ -32,3 +32,8 @@ GitHub Actions (20분마다, 맥북 꺼져 있어도 동작)
 ## GitHub Secrets (Settings → Secrets and variables → Actions)
 `IG_USER_ID`, `IG_TOKEN`, `THREADS_USER_ID`, `THREADS_TOKEN`, `GH_PAT`(토큰 자동 연장용)
 유튜브를 켤 때: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`
+
+## 인스타 게시 속도 (2026-10-23)
+- 인스타 게시는 최소 3시간 간격, 실행 1번에 1개만 (IG_MIN_GAP_MIN=180)
+- 인스타가 활동을 제한하면 12시간 쉰 뒤 재시도 (IG_BLOCK_BACKOFF_H=12)
+- 이미 같은 캡션으로 올라간 글은 다시 올리지 않고 기록만 채움
