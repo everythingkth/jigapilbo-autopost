@@ -275,11 +275,50 @@ def due(post, now):
     return now >= t
 
 
+IG_CHANNELS = ("instagram", "instagram_reel")
+IG_MIN_GAP_MIN = int(os.environ.get("IG_MIN_GAP_MIN", "180"))   # 인스타 게시 사이 최소 간격(분)
+IG_BLOCK_BACKOFF_H = int(os.environ.get("IG_BLOCK_BACKOFF_H", "12"))  # 인스타가 막으면 쉬는 시간
+
+
+def _t(s):
+    try:
+        return dt.datetime.fromisoformat(s)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def is_block_error(msg):
+    return any(k in msg for k in ("2207051", "action is blocked", "request limit reached"))
+
+
+def ig_gate(st, now):
+    """인스타를 지금 올려도 되는지. (가능 여부, 이유)"""
+    last_ok, last_block = None, None
+    for rec in st.values():
+        for name in IG_CHANNELS:
+            t = _t((rec.get(name) or {}).get("at", "")) if isinstance(rec.get(name), dict) else None
+            if t and not (rec.get(name) or {}).get("found_existing") and (last_ok is None or t > last_ok):
+                last_ok = t
+            e = (rec.get("_errors") or {}).get(name)
+            if e and is_block_error(e.get("error", "")):
+                t = _t(e.get("at", ""))
+                if t and (last_block is None or t > last_block):
+                    last_block = t
+    if last_block and now - last_block < dt.timedelta(hours=IG_BLOCK_BACKOFF_H):
+        return False, f"인스타 제한 감지({last_block:%m-%d %H:%M}) — {IG_BLOCK_BACKOFF_H}시간 쉬는 중"
+    if last_ok and now - last_ok < dt.timedelta(minutes=IG_MIN_GAP_MIN):
+        return False, f"직전 게시 {last_ok:%H:%M} — {IG_MIN_GAP_MIN}분 간격 대기"
+    return True, ""
+
+
 def main():
     now = dt.datetime.now(KST)
     only = os.environ.get("ONLY")
     st = load_state()
     failures = 0
+    ig_ok, ig_why = ig_gate(st, now)
+    if not ig_ok:
+        log(f"인스타 보류: {ig_why}")
     for pj in sorted(QUEUE.glob("*/*/post.json")):
         post = json.loads(pj.read_text(encoding="utf-8"))
         pid = post["id"]
@@ -298,6 +337,8 @@ def main():
                 if not due({"publish_at": ch["not_before"]}, now):
                     log(f"[{pid}] {name}: {ch['not_before']} 이후")
                     continue
+            if name in IG_CHANNELS and not ig_ok:
+                continue
             try:
                 res = HANDLERS[name](pj.parent, ch)
             except SkipChannel as e:
@@ -307,7 +348,13 @@ def main():
                 failures += 1
                 log(f"[{pid}] {name}: 실패 — {e}")
                 rec.setdefault("_errors", {})[name] = {"at": now.isoformat(timespec="seconds"), "error": str(e)[:500]}
+                if name in IG_CHANNELS and is_block_error(str(e)):
+                    ig_ok = False
+                    log("인스타가 활동을 제한함 — 이번 실행의 인스타 게시 중단")
+                save_state(st)
                 continue
+            if name in IG_CHANNELS and not DRY and not res.get("found_existing"):
+                ig_ok = False  # 한 번 실행에 인스타 1개만 → 몰아서 올리지 않음
             if DRY:
                 log(f"[{pid}] {name}: (DRY) {json.dumps(res, ensure_ascii=False)[:300]}")
                 continue
