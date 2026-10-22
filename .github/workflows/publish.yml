@@ -2,9 +2,6 @@ name: publish
 on:
   schedule:
     - cron: "*/20 * * * *"     # 20분마다 예약 시각 지난 글 확인
-  push:
-    branches: [main]
-    paths: ["queue/**"]
   workflow_dispatch:
     inputs:
       dry_run: {description: "1이면 실제로 올리지 않고 확인만", default: "0"}
@@ -20,6 +17,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+        with: {ref: main}          # 항상 main 최신본 (예전 커밋으로 돌면 중복 게시 위험)
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install requests==2.32.3
@@ -41,5 +39,13 @@ jobs:
         run: |
           git config user.name "jigapilbo-bot"
           git config user.email "jigapilbo-bot@users.noreply.github.com"
-          git add state/published.json 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m "게시 기록 업데이트" && git pull --rebase && git push)
+          cp state/published.json "$RUNNER_TEMP/mine.json" 2>/dev/null || exit 0
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python publisher/merge_state.py "$RUNNER_TEMP/mine.json" state/published.json
+            git add state/published.json
+            git diff --cached --quiet && exit 0
+            git commit -q -m "게시 기록 업데이트" && git push -q origin HEAD:main && exit 0
+            sleep $((i*3))
+          done
+          exit 1

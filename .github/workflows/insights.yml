@@ -17,6 +17,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with: {ref: main}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install requests==2.32.3
@@ -29,5 +30,8 @@ jobs:
         run: |
           git config user.name "jigapilbo-bot"
           git config user.email "jigapilbo-bot@users.noreply.github.com"
-          git add state/ 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m "성과·댓글 기록" && git pull --rebase && git push)
+          git add state/insights state/comments_open.json state/replies_done.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "성과·댓글 기록"
+          for i in 1 2 3 4 5; do git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && exit 0; sleep $((i*3)); done
+          exit 1
