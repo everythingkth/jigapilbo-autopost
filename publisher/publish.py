@@ -140,6 +140,24 @@ def ig_existing(uid, token, caption, reel):
     return None
 
 
+def ig_publish_checked(container_id, uid, token, caption, reel):
+    """인스타가 '활동 제한'으로 답해도 실제로는 올라가는 경우가 있어, 확인 후 성공으로 기록한다."""
+    global _RECENT
+    try:
+        return ig_publish(container_id, uid, token)
+    except RuntimeError as e:
+        if not is_block_error(str(e)):
+            raise
+        time.sleep(15)
+        _RECENT = None
+        ex = ig_existing(uid, token, caption, reel)
+        if not ex:
+            raise
+        ex.pop("found_existing", None)
+        ex["warn"] = "제한 응답 후 실제 게시 확인"
+        return ex
+
+
 def do_instagram(post_dir, ch):
     uid, token = env("IG_USER_ID"), env("IG_TOKEN")
     caption = limit_hashtags(ch["caption"], IG_MAX_HASHTAGS)[:IG_CAPTION_MAX]
@@ -152,7 +170,7 @@ def do_instagram(post_dir, ch):
     if len(urls) == 1:
         c = check(requests.post(f"{IG_API}/{uid}/media", data={"image_url": urls[0], "caption": caption, "access_token": token}, timeout=60), "IG 이미지")
         ig_wait(c["id"], token)
-        return ig_publish(c["id"], uid, token)
+        return ig_publish_checked(c["id"], uid, token, caption, reel=False)
     kids = []
     for u in urls:  # 순서 = 캐러셀 순서
         c = check(requests.post(f"{IG_API}/{uid}/media", data={"image_url": u, "is_carousel_item": "true", "access_token": token}, timeout=60), "IG 카드")
@@ -161,7 +179,7 @@ def do_instagram(post_dir, ch):
         ig_wait(k, token)
     c = check(requests.post(f"{IG_API}/{uid}/media", data={"media_type": "CAROUSEL", "children": ",".join(kids), "caption": caption, "access_token": token}, timeout=60), "IG 캐러셀")
     ig_wait(c["id"], token)
-    return ig_publish(c["id"], uid, token)
+    return ig_publish_checked(c["id"], uid, token, caption, reel=False)
 
 
 def do_instagram_reel(post_dir, ch):
@@ -178,7 +196,7 @@ def do_instagram_reel(post_dir, ch):
         return ex
     c = check(requests.post(f"{IG_API}/{uid}/media", data=data, timeout=60), "IG 릴스")
     ig_wait(c["id"], token, timeout=900)
-    return ig_publish(c["id"], uid, token)
+    return ig_publish_checked(c["id"], uid, token, caption, reel=True)
 
 
 # ---------------------------------------------------------------- Threads
@@ -300,7 +318,7 @@ def ig_gate(st, now):
             if t and not (rec.get(name) or {}).get("found_existing") and (last_ok is None or t > last_ok):
                 last_ok = t
             e = (rec.get("_errors") or {}).get(name)
-            if e and is_block_error(e.get("error", "")):
+            if e and is_block_error(e.get("error", "")) and not isinstance(rec.get(name), dict):
                 t = _t(e.get("at", ""))
                 if t and (last_block is None or t > last_block):
                     last_block = t
@@ -311,11 +329,42 @@ def ig_gate(st, now):
     return True, ""
 
 
+def reconcile_blocked(st):
+    """'활동 제한' 오류로 기록된 글이 실제로는 올라갔는지 확인해서 기록을 채운다."""
+    global _RECENT
+    if DRY or not os.environ.get("IG_TOKEN"):
+        return
+    for pj in sorted(QUEUE.glob("*/*/post.json")):
+        post = json.loads(pj.read_text(encoding="utf-8"))
+        rec = st.get(post["id"]) or {}
+        for name in IG_CHANNELS:
+            e = (rec.get("_errors") or {}).get(name)
+            ch = post.get("channels", {}).get(name)
+            if not e or not ch or isinstance(rec.get(name), dict) or not is_block_error(e.get("error", "")):
+                continue
+            try:
+                caption = limit_hashtags(ch["caption"], IG_MAX_HASHTAGS)[:IG_CAPTION_MAX]
+                ex = ig_existing(os.environ["IG_USER_ID"], os.environ["IG_TOKEN"], caption, reel=(name == "instagram_reel"))
+            except Exception as x:  # noqa: BLE001
+                log(f"확인 실패: {x}")
+                return
+            if ex:
+                ex.pop("found_existing", None)
+                ex.update({"warn": "제한 응답 후 실제 게시 확인", "at": e.get("at")})
+                rec[name] = ex
+                rec["_errors"].pop(name, None)
+                if not rec["_errors"]:
+                    rec.pop("_errors")
+                log(f"[{post['id']}] {name}: 제한 응답이었지만 실제로 올라가 있음 → 기록 {ex.get('url')}")
+                save_state(st)
+
+
 def main():
     now = dt.datetime.now(KST)
     only = os.environ.get("ONLY")
     st = load_state()
     failures = 0
+    reconcile_blocked(st)
     ig_ok, ig_why = ig_gate(st, now)
     if not ig_ok:
         log(f"인스타 보류: {ig_why}")
