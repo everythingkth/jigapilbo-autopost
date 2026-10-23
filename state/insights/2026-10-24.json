@@ -1,13 +1,47 @@
 {
- "collected_at": "2026-10-24T02:25+09:00",
+ "collected_at": "2026-10-24T06:39+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 16,
+  "media_count": 18,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18092778965196936",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-23T21:24:57+0000",
+   "permalink": "https://www.instagram.com/p/De2hHArEr_g/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "부모님 댁 겨울 난방비, 에너지바우처 확인해 보셨나요? 신청은 12월 31일까지예요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
+  {
+   "id": "18638533318052875",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-23T18:23:48+0000",
+   "permalink": "https://www.instagram.com/p/De2MYGCD-7z/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "10월 15일 코스피가 하루에 7.57% 빠졌어요. 사이드카와 서킷브레이커, 뭐가 다를까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17981328789124303",
    "media_type": "CAROUSEL_ALBUM",
