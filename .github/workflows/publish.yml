@@ -1,20 +1,21 @@
 name: publish
 on:
   schedule:
-    - cron: "*/20 * * * *"     # 20분마다 예약 시각 지난 글 확인
+    - cron: "*/20 * * * *"     # 예비 시작용 (실제 확인은 loop.sh 안에서 20분마다)
   workflow_dispatch:
     inputs:
       dry_run: {description: "1이면 실제로 올리지 않고 확인만", default: "0"}
       only: {description: "특정 글 ID만 (예: 2026-10-12_P004)", default: ""}
 permissions:
   contents: write
+  actions: write        # 끝날 때 자기 자신을 다시 실행
 concurrency:
   group: publish
   cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
         with: {ref: main}          # 항상 main 최신본 (예전 커밋으로 돌면 중복 게시 위험)
@@ -33,19 +34,10 @@ jobs:
           MEDIA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/main
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
           ONLY: ${{ github.event.inputs.only || '' }}
-        run: python publisher/publish.py
-      - name: save results
-        if: always()
-        run: |
-          git config user.name "jigapilbo-bot"
-          git config user.email "jigapilbo-bot@users.noreply.github.com"
-          cp state/published.json "$RUNNER_TEMP/mine.json" 2>/dev/null || exit 0
-          for i in 1 2 3 4 5; do
-            git fetch -q origin main && git reset -q --hard origin/main
-            python publisher/merge_state.py "$RUNNER_TEMP/mine.json" state/published.json
-            git add state/published.json
-            git diff --cached --quiet && exit 0
-            git commit -q -m "게시 기록 업데이트" && git push -q origin HEAD:main && exit 0
-            sleep $((i*3))
-          done
-          exit 1
+          LOOP_MINUTES: "300"
+        run: cp publisher/loop.sh "$RUNNER_TEMP/loop.sh" && bash "$RUNNER_TEMP/loop.sh"
+      - name: restart
+        if: always() && github.event.inputs.dry_run != '1' && github.event.inputs.only == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --ref main -R ${{ github.repository }} || true
