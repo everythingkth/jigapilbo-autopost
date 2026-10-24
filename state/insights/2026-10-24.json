@@ -1,13 +1,47 @@
 {
- "collected_at": "2026-10-24T06:39+09:00",
+ "collected_at": "2026-10-24T13:59+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 18,
+  "media_count": 20,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17976223836158637",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-24T03:27:24+0000",
+   "permalink": "https://www.instagram.com/p/De3KlmVkVHf/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "'불성실공시법인 지정 예고'가 떴다면 이미 확정일까요? 아니에요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
+  {
+   "id": "18121463581820026",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-24T00:26:20+0000",
+   "permalink": "https://www.instagram.com/p/De213dGieHp/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "휘발유 상한은 1,784원인데, 주유소 평균은 왜 1,856원일까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18092778965196936",
    "media_type": "CAROUSEL_ALBUM",
