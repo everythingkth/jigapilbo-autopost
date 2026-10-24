@@ -1,13 +1,47 @@
 {
- "collected_at": "2026-10-24T13:59+09:00",
+ "collected_at": "2026-10-24T20:36+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 20,
+  "media_count": 22,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18383332705227382",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-24T09:29:58+0000",
+   "permalink": "https://www.instagram.com/p/De30FI0lRGv/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "오래 안 쓴 네이버페이·카카오페이·토스 잔액, 내 돈도 잠들어 있을까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
+  {
+   "id": "18132871192833599",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-24T06:28:43+0000",
+   "permalink": "https://www.instagram.com/p/De3fVl7FAQP/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "청년미래적금 2차 신청했다면, 11월 27일을 꼭 기억하세요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17976223836158637",
    "media_type": "CAROUSEL_ALBUM",
