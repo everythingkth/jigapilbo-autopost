@@ -1,28 +1,45 @@
 {
- "collected_at": "2026-10-26T06:13+09:00",
+ "collected_at": "2026-10-26T14:15+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 30,
+  "media_count": 31,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17917890264266099",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-26T03:03:01+0000",
+   "permalink": "https://www.instagram.com/p/De8RYpeEbUx/",
+   "like_count": 1,
+   "comments_count": 0,
+   "caption_head": "미국 금리 결과, 한국 시간으로 언제 나올까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 1,
+   "likes": 1,
+   "comments": 0
+  },
   {
    "id": "18194439775364150",
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-25T09:39:48+0000",
    "permalink": "https://www.instagram.com/p/De6aAp3Fj9d/",
-   "like_count": 0,
+   "like_count": 1,
    "comments_count": 0,
    "caption_head": "아이폰 듀오, 지원금 받을까요 25% 할인 받을까요?",
    "reach": 0,
    "saved": 0,
    "shares": 0,
    "views": 0,
-   "total_interactions": 0,
-   "likes": 0,
+   "total_interactions": 1,
+   "likes": 1,
    "comments": 0
   },
   {
