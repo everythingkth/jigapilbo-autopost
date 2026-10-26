@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-26T14:15+09:00",
+ "collected_at": "2026-10-26T22:31+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 31,
+  "media_count": 32,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17977500138150549",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-26T09:44:18+0000",
+   "permalink": "https://www.instagram.com/p/De8_T93HNbz/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "[추진 단계·법 개정 필요] 국민연금 '적용제외' 667만명, 나도 해당될까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17917890264266099",
    "media_type": "CAROUSEL_ALBUM",
