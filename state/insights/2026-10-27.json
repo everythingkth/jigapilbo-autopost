@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-27T14:34+09:00",
+ "collected_at": "2026-10-27T21:39+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 33,
+  "media_count": 34,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18119833021966165",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-27T09:48:41+0000",
+   "permalink": "https://www.instagram.com/p/De_kmzWm5JB/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "대기업을 바란 미취업 청년, 1년 뒤 1차 노동시장에 들어간 건 12.1%였어요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18110781542260749",
    "media_type": "CAROUSEL_ALBUM",
