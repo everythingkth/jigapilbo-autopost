@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-27T07:52+09:00",
+ "collected_at": "2026-10-27T14:34+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 32,
+  "media_count": 33,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18110781542260749",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-26T23:46:49+0000",
+   "permalink": "https://www.instagram.com/p/De-furjlbb5/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "'고수익 사무보조 알바'인데 통장을 달라고요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17977500138150549",
    "media_type": "CAROUSEL_ALBUM",
