@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-29T07:51+09:00",
+ "collected_at": "2026-10-29T15:26+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 36,
+  "media_count": 37,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17912676903502047",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-28T23:42:13+0000",
+   "permalink": "https://www.instagram.com/p/DfDoytuEUDl/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "퇴직연금 ETF '투자한도 100%', 원금보장이라고 생각했나요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18138557914630041",
    "media_type": "CAROUSEL_ALBUM",
