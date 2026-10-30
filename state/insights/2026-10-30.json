@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-30T07:57+09:00",
+ "collected_at": "2026-10-30T15:24+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 37,
+  "media_count": 38,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17923267314446057",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-29T23:45:27+0000",
+   "permalink": "https://www.instagram.com/p/DfGN9Qkjkze/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "SK하이닉스 '주주환원 100조', 전부 새 돈일까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17912676903502047",
    "media_type": "CAROUSEL_ALBUM",
