@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-30T15:24+09:00",
+ "collected_at": "2026-10-30T22:31+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 11,
-  "media_count": 38,
+  "media_count": 39,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18106841798269245",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-30T09:47:19+0000",
+   "permalink": "https://www.instagram.com/p/DfHS1hCG3Js/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "폰 잃어버렸을 때, 데이터부터 지우면 안 돼요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17923267314446057",
    "media_type": "CAROUSEL_ALBUM",
