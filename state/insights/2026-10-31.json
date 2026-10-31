@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-10-31T15:15+09:00",
+ "collected_at": "2026-10-31T22:02+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
-  "follows_count": 11,
-  "media_count": 40,
+  "follows_count": 21,
+  "media_count": 41,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18127116832938884",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-31T09:31:26+0000",
+   "permalink": "https://www.instagram.com/p/DfJ10FfFhmi/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "내가 투자한 회사, 보안에 얼마 쓰는지 볼 수 있어요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18077784689741511",
    "media_type": "CAROUSEL_ALBUM",
