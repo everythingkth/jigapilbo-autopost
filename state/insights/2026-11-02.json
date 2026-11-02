@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-02T07:23+09:00",
+ "collected_at": "2026-11-02T15:47+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 21,
-  "media_count": 41,
+  "media_count": 42,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17888868246652914",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-01T23:35:38+0000",
+   "permalink": "https://www.instagram.com/p/DfN7OBDmTTZ/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "연말 직구 전, 전자기기는 '몇 대'인지부터 확인하세요.",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18127116832938884",
    "media_type": "CAROUSEL_ALBUM",
