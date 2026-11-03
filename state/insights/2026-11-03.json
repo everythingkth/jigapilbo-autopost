@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-03T06:56+09:00",
+ "collected_at": "2026-11-03T16:13+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 21,
-  "media_count": 43,
+  "media_count": 44,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18042022964661693",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-02T23:40:25+0000",
+   "permalink": "https://www.instagram.com/p/DfQgj0RkYgs/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "11월 건강보험료 고지서, 금액이 달라졌나요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18128632798837215",
    "media_type": "CAROUSEL_ALBUM",
@@ -275,7 +292,7 @@
    "reach": 0,
    "saved": 0,
    "shares": 0,
-   "views": 0,
+   "views": 1,
    "total_interactions": 0,
    "likes": 0,
    "comments": 0
