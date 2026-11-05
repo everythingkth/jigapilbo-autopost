@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-05T05:00+09:00",
+ "collected_at": "2026-11-05T13:02+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 21,
-  "media_count": 47,
+  "media_count": 48,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17900152086397831",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-04T23:33:05+0000",
+   "permalink": "https://www.instagram.com/p/DfVpT13ke3R/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "실업급여, 하루 얼마·며칠 나올까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18134470597706156",
    "media_type": "CAROUSEL_ALBUM",
