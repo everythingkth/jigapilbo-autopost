@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-06T05:15+09:00",
+ "collected_at": "2026-11-06T16:22+09:00",
  "account": {
   "username": "jigapilbo",
-  "followers_count": 1,
+  "followers_count": 0,
   "follows_count": 31,
-  "media_count": 49,
+  "media_count": 50,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18211761277372018",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-05T23:36:58+0000",
+   "permalink": "https://www.instagram.com/p/DfYOjUojbmY/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "퇴사 후 건강보험 임의계속가입, 퇴직일부터 2개월이라고 알고 있나요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "18109776431365815",
    "media_type": "CAROUSEL_ALBUM",
