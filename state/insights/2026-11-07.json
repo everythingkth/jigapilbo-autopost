@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-07T15:34+09:00",
+ "collected_at": "2026-11-07T22:31+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 31,
-  "media_count": 52,
+  "media_count": 53,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17889691794485681",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-07T09:41:39+0000",
+   "permalink": "https://www.instagram.com/p/Dfb4i0IlZje/",
+   "like_count": 1,
+   "comments_count": 0,
+   "caption_head": "청약통장에 넣은 돈, 올해 소득공제 대상인지 확인해 봤나요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 1,
+   "likes": 1,
+   "comments": 0
+  },
   {
    "id": "18115711396846163",
    "media_type": "CAROUSEL_ALBUM",
@@ -844,23 +861,6 @@
    "likes": 0,
    "comments": 0,
    "ig_reels_avg_watch_time": 14161
-  },
-  {
-   "id": "17943497196438576",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-12T01:58:18+0000",
-   "permalink": "https://www.instagram.com/p/DeYG3kkmulj/",
-   "like_count": 1,
-   "comments_count": 0,
-   "caption_head": "은행 개인정보 유출 뒤, 금융당국이 권한 대응은 ‘잠그기'와 '등록하기' 두 가지예요 (10/6 소비자경보 '주의')",
-   "reach": 1,
-   "saved": 0,
-   "shares": 0,
-   "views": 1,
-   "total_interactions": 1,
-   "likes": 1,
-   "comments": 0
   }
  ]
 }
