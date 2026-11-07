@@ -1,13 +1,30 @@
 {
- "collected_at": "2026-11-07T04:40+09:00",
+ "collected_at": "2026-11-07T15:34+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 31,
-  "media_count": 51,
+  "media_count": 52,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18115711396846163",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-11-06T23:39:53+0000",
+   "permalink": "https://www.instagram.com/p/DfazrZnlert/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "월세 꼬박꼬박 냈는데 전입신고를 안 했다면, 월세 세액공제는 어떻게 될까요?",
+   "reach": 0,
+   "saved": 0,
+   "shares": 0,
+   "views": 0,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "id": "17927511864200824",
    "media_type": "CAROUSEL_ALBUM",
@@ -837,23 +854,6 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "은행 개인정보 유출 뒤, 금융당국이 권한 대응은 ‘잠그기'와 '등록하기' 두 가지예요 (10/6 소비자경보 '주의')",
-   "reach": 1,
-   "saved": 0,
-   "shares": 0,
-   "views": 1,
-   "total_interactions": 1,
-   "likes": 1,
-   "comments": 0
-  },
-  {
-   "id": "18132166630663640",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-12T01:52:23+0000",
-   "permalink": "https://www.instagram.com/p/DeYGMKjGnBK/",
-   "like_count": 1,
-   "comments_count": 0,
-   "caption_head": "KTX 표, 이제 출발 두 달 전부터 예매할 수 있어요 (10월 1일부터)",
    "reach": 1,
    "saved": 0,
    "shares": 0,
