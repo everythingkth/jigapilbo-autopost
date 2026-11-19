@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-19T08:09+09:00",
+ "collected_at": "2026-11-19T16:54+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 31,
-  "media_count": 53,
+  "media_count": 54,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18127010155934900",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-19T03:46:54+0000",
+   "permalink": "https://www.instagram.com/reel/Df6JedBAGUC/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "중소기업 다니는 15~34세, 소득세 90% 감면 신청서 내셨나요?",
+   "reach": 30,
+   "saved": 0,
+   "shares": 0,
+   "views": 32,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0,
+   "ig_reels_avg_watch_time": 1082
+  },
   {
    "id": "17889691794485681",
    "media_type": "CAROUSEL_ALBUM",
@@ -843,24 +861,6 @@
    "likes": 0,
    "comments": 0,
    "ig_reels_avg_watch_time": 1833
-  },
-  {
-   "id": "18567014332079161",
-   "media_type": "VIDEO",
-   "media_product_type": "REELS",
-   "timestamp": "2026-10-22T18:29:00+0000",
-   "permalink": "https://www.instagram.com/reel/DezoGxzgvB1/",
-   "like_count": 0,
-   "comments_count": 0,
-   "caption_head": "청년미래적금 2차, 10/12(월)~16(금)은 홀짝 구분 없이 신청 가능해요. 다만 나이·소득 요건과 심사는 그대로예요.",
-   "reach": 0,
-   "saved": 0,
-   "shares": 0,
-   "views": 0,
-   "total_interactions": 0,
-   "likes": 0,
-   "comments": 0,
-   "ig_reels_avg_watch_time": 14161
   }
  ]
 }
