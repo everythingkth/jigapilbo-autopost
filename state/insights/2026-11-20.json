@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-20T08:08+09:00",
+ "collected_at": "2026-11-20T16:43+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 0,
   "follows_count": 31,
-  "media_count": 55,
+  "media_count": 56,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18021475430954344",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-20T03:31:06+0000",
+   "permalink": "https://www.instagram.com/reel/Df8sckREm34/",
+   "like_count": 0,
+   "comments_count": 0,
+   "caption_head": "ISA 비과세 200만원, 매년 새로 생기는 줄 알았나요?",
+   "reach": 99,
+   "saved": 0,
+   "shares": 0,
+   "views": 105,
+   "total_interactions": 0,
+   "likes": 0,
+   "comments": 0,
+   "ig_reels_avg_watch_time": 1393
+  },
   {
    "id": "18242462305319215",
    "media_type": "VIDEO",
@@ -35,14 +53,14 @@
    "like_count": 0,
    "comments_count": 0,
    "caption_head": "중소기업 다니는 15~34세, 소득세 90% 감면 신청서 내셨나요?",
-   "reach": 33,
+   "reach": 36,
    "saved": 0,
    "shares": 0,
-   "views": 35,
+   "views": 38,
    "total_interactions": 0,
    "likes": 0,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1109
+   "ig_reels_avg_watch_time": 1087
   },
   {
    "id": "17889691794485681",
@@ -844,23 +862,6 @@
    "likes": 1,
    "comments": 0,
    "ig_reels_avg_watch_time": 16168
-  },
-  {
-   "id": "18256855401247548",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-22T18:31:43+0000",
-   "permalink": "https://www.instagram.com/p/DezofRRG4z3/",
-   "like_count": 0,
-   "comments_count": 0,
-   "caption_head": "국민참여성장펀드 2차, 10월 10일 기준 남은 판매일은 12일(월)~15일(목) 나흘이에요 (선착순)",
-   "reach": 0,
-   "saved": 0,
-   "shares": 0,
-   "views": 0,
-   "total_interactions": 0,
-   "likes": 0,
-   "comments": 0
   }
  ]
 }
