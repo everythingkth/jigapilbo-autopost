@@ -167,9 +167,8 @@ def main():
         cmd += ["-f", "lavfi", "-t", f"{total_dur}", "-i", "anullsrc=r=44100:cl=stereo"]
     fl = []
     for i, (_, dur) in enumerate(scenes):
-        n = int(dur * fps)
-        fl.append(f"[{i}:v]scale=1188:2112,zoompan=z='min(zoom+0.0006,1.04)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                  f":d={n}:s={W}x{H}:fps={fps},setsar=1,format=yuv420p[v{i}]")
+        # 11/22: zoompan 확대는 프레임마다 좌표가 정수로 반올림돼 화면이 떨렸음(사장님 지적) → 정지 화면 + 디졸브로 변경
+        fl.append(f"[{i}:v]scale={W}:{H},fps={fps},setsar=1,format=yuv420p[v{i}]")
     prev, off = "v0", 0.0
     for i in range(1, len(scenes)):
         off += scenes[i - 1][1] - XF
