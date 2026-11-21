@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-21T05:42+09:00",
+ "collected_at": "2026-11-21T16:40+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 1,
   "follows_count": 41,
-  "media_count": 57,
+  "media_count": 58,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17913637908311412",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-21T03:35:01+0000",
+   "permalink": "https://www.instagram.com/reel/Df_Rr6TiXfs/",
+   "like_count": 1,
+   "comments_count": 0,
+   "caption_head": "고향사랑기부 20만원, 얼마나 돌려받을까요?",
+   "reach": 93,
+   "saved": 0,
+   "shares": 0,
+   "views": 101,
+   "total_interactions": 1,
+   "likes": 1,
+   "comments": 0,
+   "ig_reels_avg_watch_time": 1708
+  },
   {
    "id": "18040332155891097",
    "media_type": "VIDEO",
@@ -844,24 +862,6 @@
    "total_interactions": 0,
    "likes": 0,
    "comments": 0
-  },
-  {
-   "id": "18084499181333413",
-   "media_type": "VIDEO",
-   "media_product_type": "REELS",
-   "timestamp": "2026-10-22T18:34:00+0000",
-   "permalink": "https://www.instagram.com/reel/DezorcqFHJl/",
-   "like_count": 1,
-   "comments_count": 0,
-   "caption_head": "은행 개인정보 유출 뒤, 금융당국이 권한 대응은 '잠그기'와 '등록하기' 두 가지예요 (10/6 소비자경보 '주의')",
-   "reach": 2,
-   "saved": 0,
-   "shares": 0,
-   "views": 1,
-   "total_interactions": 1,
-   "likes": 1,
-   "comments": 0,
-   "ig_reels_avg_watch_time": 3494
   }
  ]
 }
