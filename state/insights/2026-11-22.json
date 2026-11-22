@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-22T09:10+09:00",
+ "collected_at": "2026-11-22T16:25+09:00",
  "account": {
   "username": "jigapilbo",
-  "followers_count": 1,
+  "followers_count": 2,
   "follows_count": 51,
-  "media_count": 59,
+  "media_count": 60,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18134593444892056",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-22T03:38:54+0000",
+   "permalink": "https://www.instagram.com/reel/DgB27k9FKs9/",
+   "like_count": 3,
+   "comments_count": 1,
+   "caption_head": "연금저축·IRP, 12월에 넣어도 올해 세액공제 받을 수 있어요.",
+   "reach": 114,
+   "saved": 1,
+   "shares": 0,
+   "views": 137,
+   "total_interactions": 5,
+   "likes": 3,
+   "comments": 1,
+   "ig_reels_avg_watch_time": 3080
+  },
   {
    "id": "18232649737332461",
    "media_type": "VIDEO",
@@ -17,14 +35,14 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "보너스 100만원이 들어왔다면, 딱 하나만 고른다면?",
-   "reach": 102,
+   "reach": 104,
    "saved": 0,
    "shares": 0,
-   "views": 108,
+   "views": 110,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1621
+   "ig_reels_avg_watch_time": 1652
   },
   {
    "id": "17913637908311412",
@@ -35,14 +53,14 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "고향사랑기부 20만원, 얼마나 돌려받을까요?",
-   "reach": 103,
+   "reach": 106,
    "saved": 0,
    "shares": 0,
-   "views": 111,
+   "views": 113,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 2044
+   "ig_reels_avg_watch_time": 2055
   },
   {
    "id": "18040332155891097",
@@ -53,14 +71,14 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "적금 연 4%와 예금 연 4%, 이자가 같을까요?",
-   "reach": 103,
+   "reach": 106,
    "saved": 0,
    "shares": 0,
-   "views": 112,
+   "views": 115,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1551
+   "ig_reels_avg_watch_time": 1589
   },
   {
    "id": "18021475430954344",
@@ -71,14 +89,14 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "ISA 비과세 200만원, 매년 새로 생기는 줄 알았나요?",
-   "reach": 103,
+   "reach": 106,
    "saved": 0,
    "shares": 0,
-   "views": 109,
+   "views": 111,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1386
+   "ig_reels_avg_watch_time": 1387
   },
   {
    "id": "18242462305319215",
@@ -89,14 +107,14 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "실업급여 받는 동안 국민연금, 비워 두고 계신가요?",
-   "reach": 50,
+   "reach": 52,
    "saved": 0,
    "shares": 0,
-   "views": 54,
+   "views": 55,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0,
-   "ig_reels_avg_watch_time": 2570
+   "ig_reels_avg_watch_time": 2530
   },
   {
    "id": "18127010155934900",
@@ -107,14 +125,14 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "중소기업 다니는 15~34세, 소득세 90% 감면 신청서 내셨나요?",
-   "reach": 37,
+   "reach": 39,
    "saved": 0,
    "shares": 0,
-   "views": 39,
+   "views": 41,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1125
+   "ig_reels_avg_watch_time": 1091
   },
   {
    "id": "17889691794485681",
@@ -125,10 +143,10 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "청약통장에 넣은 돈, 올해 소득공제 대상인지 확인해 봤나요?",
-   "reach": 3,
+   "reach": 4,
    "saved": 0,
    "shares": 0,
-   "views": 3,
+   "views": 4,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0
@@ -142,10 +160,10 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "월세 꼬박꼬박 냈는데 전입신고를 안 했다면, 월세 세액공제는 어떻게 될까요?",
-   "reach": 3,
+   "reach": 4,
    "saved": 0,
    "shares": 0,
-   "views": 4,
+   "views": 5,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0
@@ -839,23 +857,6 @@
    "like_count": 0,
    "comments_count": 0,
    "caption_head": "기준금리 연 3.00%. 10월 22일 금통위 결과는 아직이에요.",
-   "reach": 0,
-   "saved": 0,
-   "shares": 0,
-   "views": 0,
-   "total_interactions": 0,
-   "likes": 0,
-   "comments": 0
-  },
-  {
-   "id": "18117504121797355",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-22T19:55:34+0000",
-   "permalink": "https://www.instagram.com/p/DezyGAtjz67/",
-   "like_count": 0,
-   "comments_count": 0,
-   "caption_head": "환율 1,338.5원. 7월 2일 마감(1,555.8원)보다 217원 내렸어요.",
    "reach": 0,
    "saved": 0,
    "shares": 0,
