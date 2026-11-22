@@ -133,6 +133,32 @@ def scene_end(spec, total):
     return im
 
 
+def scene_single(spec):
+    """11/22 방법 변경: 한 장 요약형(gamjya.money 34만 조회 형식 참고) — 상단 제목 띠 + 항목 표 + 댓글 질문을 한 화면에."""
+    im, d = base(spec, 0, 1)
+    y = BAR_BOT + 70
+    rows = spec["beats"]
+    fb_px, ft_px = (110, 58) if len(rows) <= 3 else (92, 52)
+    gap = 36
+    for b in rows:
+        fb = B.font("black", fb_px)
+        bw = B.tw(d, b["big"], fb)[0]
+        d.rounded_rectangle([M, y, W - M, y + int(fb_px * 1.55)], radius=28, fill=B.PAPER_DARK)
+        d.text((M + 34, y + int(fb_px * 0.2)), b["big"], font=fb, fill=B.ACCENT)
+        ft = B.font("bold", ft_px)
+        tx = M + 34 + bw + 36
+        lines = b["text"].split("\n")
+        lh = int(ft_px * 1.25)
+        ty = y + int(fb_px * 1.55) // 2 - lh * len(lines) // 2
+        for ln in lines:
+            d.text((tx, ty), ln, font=ft, fill=B.INK); ty += lh
+        y += int(fb_px * 1.55) + gap
+    if spec.get("cta"):
+        fs = B.font("black", 66)
+        B.text_block(d, (M, y + 30), spec["cta"], fs, B.INK, W - 2 * M, gap=1.3)
+    return im
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec"); ap.add_argument("--date", required=True); ap.add_argument("--at", required=True)
@@ -142,11 +168,16 @@ def main():
     root = os.path.abspath(os.path.join(HERE, "..", ".."))
     od = a.out or os.path.join(root, "queue", a.date, spec["pid"])
     os.makedirs(od, exist_ok=True)
-    total = len(spec["beats"]) + 2
-    scenes = [(scene_hook(spec, total), 2.6)]
-    for i, b in enumerate(spec["beats"], 1):
-        scenes.append((scene_beat(spec, b, i, total), 3.2))
-    scenes.append((scene_end(spec, total), 2.8))
+    if spec.get("layout") == "single":
+        scenes = [(scene_single(spec), float(spec.get("single_dur", 9)))]
+    else:
+        hook = not spec.get("skip_hook")
+        total = len(spec["beats"]) + 1 + (1 if hook else 0)
+        scenes = [(scene_hook(spec, total), 2.6)] if hook else []
+        off = 1 if hook else 0
+        for i, b in enumerate(spec["beats"]):
+            scenes.append((scene_beat(spec, b, i + off, total), float(spec.get("beat_dur", 3.2))))
+        scenes.append((scene_end(spec, total), float(spec.get("end_dur", 2.8))))
     tmp = tempfile.mkdtemp()
     paths = []
     for i, (im, _) in enumerate(scenes):

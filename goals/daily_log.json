@@ -11,8 +11,23 @@
    "P056 12:30 정보형 v2",
    "G001 19:30 밸런스 게임(블로그 글번호와 겹치지 않게 G번호)"
   ],
-  "actual": null,
-  "achieved": null,
+  "actual": {
+   "followers_total": 1,
+   "best_reel_reach": 102,
+   "avg_watch_sec": 1.95,
+   "interactions": 4,
+   "measured": "11/22 04:45 수집, P056 16.2시간·G001 9.1시간 시점",
+   "views": {
+    "P056": 110,
+    "G001": 108
+   }
+  },
+  "achieved": {
+   "followers_total": true,
+   "best_reel_reach": false,
+   "avg_watch_sec": false,
+   "interactions": true
+  },
   "changes": null
  },
  "2026-11-20": {
@@ -28,11 +43,17 @@
   "achieved": null
  },
  "2026-11-22": {
-  "goals": null,
+  "goals": {
+   "followers_total": 6,
+   "best_reel_reach": 134,
+   "avg_watch_sec": 2.6,
+   "interactions": 4
+  },
   "reels": [
-   "P057 12:30 연금저축 정보형 v2",
-   "G002 19:30 A/B 2지선다 게임(G001 4지선다와 비교)"
+   "P057 12:30 정보형, 첫 화면 바로 숫자(훅 장면 삭제)·9.2초",
+   "G002 19:30 한 장 요약형 A/B 9초"
   ],
-  "note": "목표는 11/22 09:07 점검 때 11/21 결과로 세팅"
+  "note": "목표는 11/22 09:07 점검 때 11/21 결과로 세팅",
+  "basis": "도달 최고 103×1.3=134(미달 유지), 시청 최고 1.95×1.3≈2.6초(11/21 목표 3.4는 v1 2.6 기준이었으나 최근 측정 기준으로 보정), 팔로워 주간 30까지 29명÷6일=+5/일 → 누적 6, 반응 11/21 4건 유지"
  }
 }
