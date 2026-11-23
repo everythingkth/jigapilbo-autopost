@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-23T09:11+09:00",
+ "collected_at": "2026-11-23T17:10+09:00",
  "account": {
   "username": "jigapilbo",
   "followers_count": 3,
   "follows_count": 51,
-  "media_count": 61,
+  "media_count": 62,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "17905347936372018",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-23T03:42:41+0000",
+   "permalink": "https://www.instagram.com/reel/DgEcJwNl8Wb/",
+   "like_count": 1,
+   "comments_count": 0,
+   "caption_head": "📌 12월 18일 전에 다시 보게 저장해 두세요.",
+   "reach": 102,
+   "saved": 0,
+   "shares": 0,
+   "views": 115,
+   "total_interactions": 1,
+   "likes": 1,
+   "comments": 0,
+   "ig_reels_avg_watch_time": 1679
+  },
   {
    "id": "17996095518024772",
    "media_type": "VIDEO",
@@ -17,14 +35,14 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "월급날 30만원이 남았다면, A vs B 딱 하나만 고른다면?",
-   "reach": 105,
+   "reach": 107,
    "saved": 0,
    "shares": 0,
-   "views": 118,
+   "views": 119,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 2764
+   "ig_reels_avg_watch_time": 2747
   },
   {
    "id": "18134593444892056",
@@ -35,14 +53,14 @@
    "like_count": 3,
    "comments_count": 1,
    "caption_head": "연금저축·IRP, 12월에 넣어도 올해 세액공제 받을 수 있어요.",
-   "reach": 114,
+   "reach": 115,
    "saved": 1,
    "shares": 0,
-   "views": 137,
+   "views": 139,
    "total_interactions": 5,
    "likes": 3,
    "comments": 1,
-   "ig_reels_avg_watch_time": 3061
+   "ig_reels_avg_watch_time": 3084
   },
   {
    "id": "18232649737332461",
@@ -53,14 +71,14 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "보너스 100만원이 들어왔다면, 딱 하나만 고른다면?",
-   "reach": 104,
+   "reach": 105,
    "saved": 0,
    "shares": 0,
    "views": 115,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1644
+   "ig_reels_avg_watch_time": 1748
   },
   {
    "id": "17913637908311412",
@@ -71,14 +89,14 @@
    "like_count": 2,
    "comments_count": 0,
    "caption_head": "고향사랑기부 20만원, 얼마나 돌려받을까요?",
-   "reach": 106,
+   "reach": 107,
    "saved": 0,
    "shares": 0,
-   "views": 113,
+   "views": 114,
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 2055
+   "ig_reels_avg_watch_time": 2162
   },
   {
    "id": "18040332155891097",
@@ -107,14 +125,14 @@
    "like_count": 1,
    "comments_count": 0,
    "caption_head": "ISA 비과세 200만원, 매년 새로 생기는 줄 알았나요?",
-   "reach": 106,
+   "reach": 107,
    "saved": 0,
    "shares": 0,
-   "views": 111,
+   "views": 112,
    "total_interactions": 1,
    "likes": 1,
    "comments": 0,
-   "ig_reels_avg_watch_time": 1387
+   "ig_reels_avg_watch_time": 1384
   },
   {
    "id": "18242462305319215",
@@ -841,23 +859,6 @@
    "like_count": 0,
    "comments_count": 0,
    "caption_head": "월급에서 국민연금이 떼였는데 회사가 안 냈다면, 내 가입기간은 어떻게 될까요?",
-   "reach": 0,
-   "saved": 0,
-   "shares": 0,
-   "views": 0,
-   "total_interactions": 0,
-   "likes": 0,
-   "comments": 0
-  },
-  {
-   "id": "18114033991844727",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-22T21:10:17+0000",
-   "permalink": "https://www.instagram.com/p/Dez6omvD6KD/",
-   "like_count": 0,
-   "comments_count": 0,
-   "caption_head": "삼성전자 3분기 영업이익 107.4조원(잠정), 이 숫자 어떻게 읽어야 할까요?",
    "reach": 0,
    "saved": 0,
    "shares": 0,
