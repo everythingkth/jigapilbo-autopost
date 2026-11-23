@@ -66,6 +66,11 @@ def base(spec, idx, total):
     if spec.get("topbar"):
         topbar(im, d, spec)
         d.text((M, 150), B.BRAND, font=B.font("mast", 52), fill=B.INK)
+        if spec.get("series"):  # 11/23: 시리즈 꼬리표(벤치마크 machanceo 같은 제목 시리즈)
+            fs = B.font("black", 40)
+            tw = B.tw(d, spec["series"], fs)[0]
+            d.rounded_rectangle([W - M - tw - 44, 150, W - M, 214], radius=32, fill=B.ACCENT)
+            d.text((W - M - tw - 22, 158), spec["series"], font=fs, fill=(255, 255, 255))
         bw = (W - 2 * M - (total - 1) * 12) / total
         for i in range(total):
             x0 = M + i * (bw + 12)
@@ -126,11 +131,21 @@ def scene_end(spec, total):
     y = B.text_block(d, (M, y), spec["end"], f, B.INK, W - 2 * M, gap=1.28)
     if spec.get("cta"):
         fs = B.font("black", 62)
-        B.text_block(d, (M, y + 70), spec["cta"], fs, B.ACCENT, W - 2 * M, gap=1.35)
+        y2 = B.text_block(d, (M, y + 70), spec["cta"], fs, B.ACCENT, W - 2 * M, gap=1.35)
+        follow_line(d, spec, y2)
     else:
         fs = B.font("bold", 54)
         B.text_block(d, (M, y + 60), "자세한 조건·출처는\n프로필 링크 블로그에", fs, B.INK_SOFT, W - 2 * M, gap=1.4)
     return im
+
+
+def follow_line(d, spec, after_y=0):
+    """11/23: 마지막 화면에 팔로우할 이유 한 줄(본문과 겹치지 않게 본문 아래 40px 이상)."""
+    if spec.get("follow_line"):
+        f = B.font("bold", 46)
+        t = spec["follow_line"]
+        y = max(SAFE_BOTTOM - 70, after_y + 40)
+        d.text(((W - B.tw(d, t, f)[0]) // 2, y), t, font=f, fill=B.INK_SOFT)
 
 
 def scene_single(spec):
@@ -140,6 +155,8 @@ def scene_single(spec):
     rows = spec["beats"]
     fb_px, ft_px = (110, 58) if len(rows) <= 3 else (92, 52)
     gap = 36
+    if spec.get("follow_line"):  # 팔로우 한 줄이 안전 영역 안에 들어오게 조금 줄임
+        fb_px, ft_px, gap = fb_px - 14, ft_px - 4, 24
     for b in rows:
         fb = B.font("black", fb_px)
         bw = B.tw(d, b["big"], fb)[0]
@@ -155,7 +172,8 @@ def scene_single(spec):
         y += int(fb_px * 1.55) + gap
     if spec.get("cta"):
         fs = B.font("black", 66)
-        B.text_block(d, (M, y + 30), spec["cta"], fs, B.INK, W - 2 * M, gap=1.3)
+        y = B.text_block(d, (M, y + 30), spec["cta"], fs, B.INK, W - 2 * M, gap=1.3)
+    follow_line(d, spec, y)
     return im
 
 
