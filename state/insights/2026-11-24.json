@@ -1,13 +1,31 @@
 {
- "collected_at": "2026-11-24T09:20+09:00",
+ "collected_at": "2026-11-24T19:23+09:00",
  "account": {
   "username": "jigapilbo",
-  "followers_count": 4,
+  "followers_count": 5,
   "follows_count": 61,
-  "media_count": 63,
+  "media_count": 64,
   "id": "30030839523173068"
  },
  "media": [
+  {
+   "id": "18102174959419718",
+   "media_type": "VIDEO",
+   "media_product_type": "REELS",
+   "timestamp": "2026-11-24T03:32:05+0000",
+   "permalink": "https://www.instagram.com/reel/DgG_u3IjHGM/",
+   "like_count": 2,
+   "comments_count": 0,
+   "caption_head": "📌 부모님께 보내 드리거나 저장해 두세요.",
+   "reach": 46,
+   "saved": 0,
+   "shares": 0,
+   "views": 48,
+   "total_interactions": 2,
+   "likes": 2,
+   "comments": 0,
+   "ig_reels_avg_watch_time": 1064
+  },
   {
    "id": "18023949491731108",
    "media_type": "VIDEO",
@@ -24,7 +42,7 @@
    "total_interactions": 2,
    "likes": 2,
    "comments": 0,
-   "ig_reels_avg_watch_time": 11624
+   "ig_reels_avg_watch_time": 8944
   },
   {
    "id": "17905347936372018",
@@ -843,23 +861,6 @@
    "like_count": 0,
    "comments_count": 0,
    "caption_head": "IMF가 한국 올해 성장률 전망을 3.3%로 올렸어요",
-   "reach": 1,
-   "saved": 0,
-   "shares": 0,
-   "views": 2,
-   "total_interactions": 0,
-   "likes": 0,
-   "comments": 0
-  },
-  {
-   "id": "17915596446537516",
-   "media_type": "CAROUSEL_ALBUM",
-   "media_product_type": "FEED",
-   "timestamp": "2026-10-22T21:11:51+0000",
-   "permalink": "https://www.instagram.com/p/Dez60JQj-jO/",
-   "like_count": 0,
-   "comments_count": 0,
-   "caption_head": "'전 국민 무료 AI'라던 모두의 AI, 지금 쓸 수 있을까요?",
    "reach": 1,
    "saved": 0,
    "shares": 0,
