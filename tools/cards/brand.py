@@ -96,7 +96,7 @@ def double_rule(draw, y, x0, x1, color=INK, thick=6, thin=2, gap=6):
 def masthead_bar(draw, W, date_label, section, page=None):
     m = 72
     draw.text((m, 58), BRAND, font=font("mast", 46), fill=INK)
-    right = f"{date_label}  ·  {section}"
+    right = f"{date_label}  ·  {section}" if date_label else section
     if page:
         right += f"  ·  {page}"
     f = font("med", 26)
