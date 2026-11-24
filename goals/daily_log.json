@@ -99,6 +99,20 @@
    "avg_watch_sec": false,
    "interactions": false,
    "note": "P058만 4.5시간 시점, P059(내레이션) 미수집 — 다음 수집 후 보정"
+  },
+  "actual": {
+   "followers_total": 4,
+   "best_reel_reach": 102,
+   "avg_watch_sec": 1.8,
+   "interactions": 4,
+   "measured": "11/24 09:10 수집, P058 20.5시간·P059 13.4시간",
+   "note": "P059(내레이션판) 도달 2·조회 2·시청 11.62초(표본 2명이라 판정에서 제외)"
+  },
+  "achieved": {
+   "followers_total": false,
+   "best_reel_reach": false,
+   "avg_watch_sec": false,
+   "interactions": false
   }
  },
  "2026-11-24": {
