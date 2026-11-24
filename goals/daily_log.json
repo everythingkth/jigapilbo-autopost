@@ -92,14 +92,35 @@
    "best_reel_reach": 102,
    "avg_watch_sec": 1.68,
    "interactions": 1
+  },
+  "achieved_partial": {
+   "followers_total": false,
+   "best_reel_reach": false,
+   "avg_watch_sec": false,
+   "interactions": false,
+   "note": "P058만 4.5시간 시점, P059(내레이션) 미수집 — 다음 수집 후 보정"
   }
  },
  "2026-11-24": {
-  "goals": null,
+  "goals": {
+   "followers_total": 10,
+   "best_reel_reach": 148,
+   "avg_watch_sec": 4.0,
+   "interactions": 9
+  },
   "reels": [
    "P060 12:30 실손 5세대 전환 정보형",
    "P061 19:30 미청구 실손보험금 한 장 요약형"
   ],
-  "note": "목표는 11/24 09:07 점검 때"
+  "note": "목표는 11/24 09:07 점검 때",
+  "basis": "11/23 미달로 목표 유지(도달 148·시청 4.0·반응 9), 팔로워 주간 30까지 27명÷4일=+7/일 → 누적 10"
+ },
+ "2026-11-25": {
+  "goals": null,
+  "reels": [
+   "R001 12:30 연말 전 놓치는 돈 3가지(체크리스트 한 장, 첫 화면 큰 금액)",
+   "G003 19:30 월급 300 주5일 vs 250 주4일"
+  ],
+  "note": "목표는 11/25 09:07"
  }
 }
