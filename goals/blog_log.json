@@ -1,5 +1,25 @@
 {
  "_rule": "GPT(Codex) 매일 보고를 사장님이 채팅방에 붙여 넣으면 그대로 기록. 못 본 값은 null('확인 불가'), 0으로 채우지 않음. 11/26 시작.",
- "posts": {"P065": {"title": "부모님 부양가족 공제, 올해 소득 100만원 넘었는지 12월에 확인하세요", "package": "/home/claude/work/p065/package", "handed_over": "2026-11-26", "url": null}},
- "daily": []
+ "posts": {
+  "P065": {
+   "title": "부모님 부양가족 공제, 올해 소득금액 100만원 넘었는지 12월에 확인하세요",
+   "package": "/home/claude/work/p065/package",
+   "handed_over": "2026-11-26",
+   "url": "https://blog.naver.com/trymusic17/224493493798",
+   "published": "2026-11-26 19:05 KST",
+   "version": "v2",
+   "verified_by_codex": "제목·질문→답→예외→공식링크, 표 2·링크 8·사진 5장 로딩, 전체공개·댓글·공감·검색 허용"
+  }
+ },
+ "daily": [
+  {
+   "date": "2026-11-25",
+   "uv": 0,
+   "pv": 0,
+   "source": "Codex 11/26 19:06 보고"
+  }
+ ],
+ "notes": [
+  "2026-11-26 Codex: 11/26 이전 최근 글 12편 관리자 목록 누적 조회 각 0. P058 제목·질문 검색 표본에서 자사 결과 미확인(색인 문제로 단정 안 함)."
+ ]
 }
