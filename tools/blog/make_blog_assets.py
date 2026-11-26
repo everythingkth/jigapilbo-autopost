@@ -56,10 +56,11 @@ def toon_html(t):
 
 
 def sticker_html(s):
+    # 11/27: 네이버 모바일에서 420px 스티커가 화면 폭 가득 커져서, 넓은 투명 캔버스 가운데에 작게 둔다.
     txt = f'<div class="t">{esc(s["text"])}</div>' if s.get("text") else ""
-    return (f'<!doctype html><meta charset="utf-8"><style>{FONTS}body{{margin:0;width:420px;height:420px;background:transparent;font-family:P;position:relative}}'
-            f'svg{{position:absolute;left:30px;top:40px}}.t{{position:absolute;top:6px;left:0;right:0;text-align:center;font-weight:900;font-size:50px;color:{INK};'
-            f'-webkit-text-stroke:0;text-shadow:0 0 6px #fff,0 0 6px #fff,0 0 6px #fff}}</style>{kkaeal.expr(s["expr"], 360)}{txt}')
+    return (f'<!doctype html><meta charset="utf-8"><style>{FONTS}body{{margin:0;width:960px;height:360px;background:transparent;font-family:P;position:relative}}'
+            f'svg{{position:absolute;left:345px;top:70px}}.t{{position:absolute;top:8px;left:0;right:0;text-align:center;font-weight:900;font-size:46px;color:{INK};'
+            f'text-shadow:0 0 6px #fff,0 0 6px #fff,0 0 6px #fff}}</style>{kkaeal.expr(s["expr"], 270)}{txt}')
 
 
 def main():
@@ -86,7 +87,7 @@ def main():
         if spec.get("toon"):
             shot(toon_html(spec["toon"]), f"{n:02d}_깨알이툰.png", 1080, full=True); n += 1
         for s in spec.get("stickers", []):
-            shot(sticker_html(s), f"{n:02d}_스티커_{s['expr']}.png", 420, 420, transparent=True); n += 1
+            shot(sticker_html(s), f"{n:02d}_스티커_{s['expr']}.png", 960, 360, transparent=True); n += 1
         b.close()
     print(json.dumps(made, ensure_ascii=False))
 
