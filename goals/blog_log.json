@@ -1,0 +1,5 @@
+{
+ "_rule": "GPT(Codex) 매일 보고를 사장님이 채팅방에 붙여 넣으면 그대로 기록. 못 본 값은 null('확인 불가'), 0으로 채우지 않음. 11/26 시작.",
+ "posts": {"P065": {"title": "부모님 부양가족 공제, 올해 소득 100만원 넘었는지 12월에 확인하세요", "package": "/home/claude/work/p065/package", "handed_over": "2026-11-26", "url": null}},
+ "daily": []
+}
