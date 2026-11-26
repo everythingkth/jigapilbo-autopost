@@ -1,0 +1,13 @@
+{
+ "updated": "2026-11-26",
+ "band_rule": "비슷한 규모 = 경제·재테크·생활돈 계정 중 팔로워가 우리 단계의 비교 구간에 드는 곳. 우리 팔로워 100 미만: 1~5,000 / 100~1,000: 100~1만 / 1,000~1만: 1,000~5만 / 1만 이상: 우리의 0.3~3배. 우리 팔로워가 구간을 넘으면 다음 날 목록을 다시 짠다. 2주 넘게 릴스가 없거나 구간을 벗어난 계정은 새 계정으로 바꿔 항상 30개 유지.",
+ "our_followers": 8,
+ "accounts": [
+  ["salary.recipe",396],["gamjya.money",454],["dotori_economics",2129],["ppullyum",2853],["moneychefkr",1685],
+  ["good_mons",1109],["globalissue_ink",2225],["daisy_saving",969],["hey_look365",1463],["money_siba",38],
+  ["ideuglab",7],["tofu.ai.insta",4655],["donmama_money",132],["gosu_rin",4628],["yuralee.cs",2196],
+  ["ddoyaki.money",1017],["altton_egg",468],["manwon_lab",3691],["machanceo",986],["mozi.toon",639],
+  ["lifeup_____",888],["iiijij2_2",14],["shwan_tip",759],["doit_jaemu",303],["1000_berry",645],
+  ["finanswer_core",724],["ding.e.o",97],["my.checkmoney",14],["chaeyoon_invest",1421],["san_dokki",1]
+ ]
+}
