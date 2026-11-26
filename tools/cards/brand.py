@@ -22,7 +22,7 @@ ACCENT = "#FF5B26"
 HILITE = "#FFE45C"
 
 BRAND = "지갑일보"
-HANDLE = "@jigapilbo"
+HANDLE = "@kkaeal.toon"  # 11/27 아이디 변경(구 @jigapilbo)
 TAGLINE = "내 지갑에 닿는 뉴스만, 매일 아침"
 
 
