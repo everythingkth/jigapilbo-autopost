@@ -502,16 +502,16 @@
  "2026-11-27_R003": {
   "_errors": {
    "instagram_reel": {
-    "at": "2026-11-28T12:47:28+09:00",
-    "error": "IG 최근 게시물 실패 HTTP 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"A1FzsT_D1pguwXGqOTvSJwg\"}}"
+    "at": "2026-11-28T13:07:31+09:00",
+    "error": "IG 최근 게시물 실패 HTTP 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"AVpo8g-rdqt436BhWR63mJG\"}}"
    }
   }
  },
  "2026-11-27_G005": {
   "_errors": {
    "instagram_reel": {
-    "at": "2026-11-28T12:47:28+09:00",
-    "error": "IG 최근 게시물 실패 HTTP 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"A_ncpaxgiutJZgwpFsmP0rR\"}}"
+    "at": "2026-11-28T13:07:31+09:00",
+    "error": "IG 최근 게시물 실패 HTTP 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"A5N5U6M2xBCIbwZfxl24yyk\"}}"
    }
   }
  }
